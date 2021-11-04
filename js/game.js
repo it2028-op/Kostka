@@ -4,12 +4,27 @@ const buttonek = document.getElementById('playb');
 
 let hod = 1;
 let hody = [];
+let timer = false;
+
+function animace() {
+    hod = Math.ceil(Math.random() * 6);
+    kostka.src = 'img/kostka' + hod + '.png';
+}
 
 buttonek.addEventListener('click', function(){
-    hod = Math.ceil(Math.random() * 6);
+    if (!timer) {
+        timer = setInterval(animace, 50);
+        buttonek.innerText = 'STOP';
+    } else {
+        clearInterval(timer);
+        timer = false;
+        buttonek.innerText = 'PLAY'
+        hody.push(hod);
+        vypisStat();
+    }
+
     hody.push(hod);
     console.log(hody);
-    kostka.src = 'img/kostka' + hod + '.png';
     vypisStat();
 })
 
