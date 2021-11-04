@@ -1,0 +1,16 @@
+body{
+    background-image: url(../img/thumb2-blue-wooden-boards-macro-blue-wooden-texture-wooden-backgrounds-wooden-textures.jpg);
+}
+header{
+    margin-top: 75px;
+    margin-left: 225px;
+    margin-right: 225px;
+    padding: 75px;
+}
+main{
+    padding: 75px;
+    margin-top: 25px;
+    margin-left: 225px;
+    margin-right: 225px;
+    align-items: center;
+}
