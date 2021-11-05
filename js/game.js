@@ -30,6 +30,9 @@ function mach(){
     if((hod1==1 && hod2==2) || (hod1 ==2 && hod2 == 1)){
         return 'macháčka';
     }
+    else if(hod1 ==1 && hod1 == hod2){
+        return hod1 + ' indiánek';
+    }
     else if (hod1 == hod2 && hod1 > 4){
         return hod1 + ' indiánků';
     }
@@ -37,9 +40,9 @@ function mach(){
         return hod1 + ' indiánky';
     }else{
         if(hod1>hod2){
-            return hod1 + '' + hod2;
+            return hod1 * 10 + hod2;
         } else{
-            return hod2 + '' + hod1;
+            return hod2 * 10 + hod1;
         }
     }
 }
